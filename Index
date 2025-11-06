@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Bracelets | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Simple Bracelets</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Handmade Bracelets for Every Style</h2>
+    <p>Discover timeless simplicity and elegance in every piece.</p>
+    <a href="shop.html" class="btn">Shop Now</a>
+  </section>
+
+  <section class="features">
+    <div>
+      <h3>🌿 Handmade</h3>
+      <p>Each bracelet is crafted by hand with care and passion.</p>
+    </div>
+    <div>
+      <h3>💎 Quality Materials</h3>
+      <p>We use durable and sustainable materials for long-lasting wear.</p>
+    </div>
+    <div>
+      <h3>🎁 Perfect Gift</h3>
+      <p>Beautiful packaging makes our bracelets perfect for gifting.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Simple Bracelets | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
