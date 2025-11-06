@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Bracelets | About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Simple Bracelets</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html" class="active">About</a>
+    </nav>
+  </header>
+
+  <section class="about">
+    <h2>Our Story</h2>
+    <p>
+      Simple Bracelets began with a passion for crafting timeless, minimal jewelry 
+      that complements any outfit. Each bracelet is handmade using sustainable 
+      materials and designed to bring joy and simplicity into your everyday life.
+    </p>
+    <p>
+      We believe beauty lies in the details — that’s why every knot, bead, and clasp 
+      is made with love and care.
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Simple Bracelets | All Rights Reserved</p>
+  </footer>
+</body>
+</html>
