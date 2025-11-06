@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Bracelets | Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Simple Bracelets</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <section class="shop">
+    <h2>Our Collection</h2>
+    <div class="products" id="product-list"></div>
+
+    <div class="cart">
+      <h3>Your Cart</h3>
+      <ul id="cart-items"></ul>
+      <p><strong>Total:</strong> $<span id="cart-total">0.00</span></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Simple Bracelets | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const products = [
+      { id: 1, name: "Beaded Bracelet", price: 15.00, img: "https://via.placeholder.com/200" },
+      { id: 2, name: "Leather Wrap", price: 20.00, img: "https://via.placeholder.com/200" },
+      { id: 3, name: "Braided Rope", price: 10.00, img: "https://via.placeholder.com/200" },
+      { id: 4, name: "Minimalist Chain", price: 25.00, img: "https://via.placeholder.com/200" }
+    ];
+
+    const productList = document.getElementById('product-list');
+    const cartItems = document.getElementById('cart-items');
+    const cartTotal = document.getElementById('cart-total');
+    let cart = [];
+
+    function renderProducts() {
+      products.forEach(p => {
+        const div = document.createElement('div');
+        div.classList.add('product');
+        div.innerHTML = `
+          <img src="${p.img}" alt="${p.name}">
+          <h3>${p.name}</h3>
+          <p>$${p.price.toFixed(2)}</p>
+          <button onclick="addToCart(${p.id})">Add to Cart</button>
+        `;
+        productList.appendChild(div);
+      });
+    }
+
+    function addToCart(id) {
+      const product = products.find(p => p.id === id);
+      cart.push(product);
+      renderCart();
+    }
+
+    function renderCart() {
+      cartItems.innerHTML = '';
+      let total = 0;
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+        cartItems.appendChild(li);
+        total += item.price;
+      });
+      cartTotal.textContent = total.toFixed(2);
+    }
+
+    renderProducts();
+  </script>
+</body>
+</html>
